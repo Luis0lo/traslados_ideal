@@ -1,12 +1,13 @@
 section {
-  height: 100vh;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  height: 100vh;
   padding-top: 5rem;
   padding-left: 6rem;
   padding-right: 6rem;
-  background-color: black;
+  background-color: rgb(24, 24, 24);
 }
 @media (max-width: 640px) {
   section {
@@ -20,15 +21,11 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
   height: 65vh;
   align-items: stretch;
-  color: white;
-}
-@media (max-width: 640px) {
-  .content {
-    height: 50vh;
-  }
+  color: rgb(207, 207, 207);
 }
 .content p:first-child {
   font-size: 1.2rem;
@@ -39,11 +36,6 @@ section {
   font-size: 4vw;
   font-weight: normal;
 }
-@media (max-width: 640px) {
-  .content h1 {
-    font-size: 2.2rem;
-  }
-}
 .content p:nth-child(2) {
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -52,35 +44,43 @@ section {
 .content p:nth-child(3) {
   font-size: 5vw;
 }
-@media (max-width: 640px) {
-  .content p:nth-child(3) {
-    font-size: 2.5rem;
-  }
-}
 .content .mainTitle {
   min-height: 35vh;
-}
-@media (max-width: 640px) {
-  .content .mainTitle {
-    min-height: 100px;
-  }
 }
 .content .callToAction {
   text-align: center;
 }
 .content .callToAction button {
-  background-color: transparent;
-  color: white;
+  background-color: rgb(245, 209, 13);
+  color: rgb(24, 24, 24);
   font-size: 1.2rem;
-  border: 2px solid yellow;
+  border: 2px solid rgb(245, 209, 13);
   border-radius: 5px;
   padding: 0.7rem 3rem;
   cursor: pointer;
   transition: all 1s ease;
 }
 .content .callToAction button:hover {
-  background-color: yellow;
-  color: black;
+  background-color: rgb(246, 231, 29);
+  color: rgb(24, 24, 24);
+}
+@media (max-width: 640px) {
+  .content {
+    height: 50vh;
+    justify-content: space-between;
+  }
+  .content .mainTitle {
+    min-height: 100px;
+  }
+  .content h1 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+    -webkit-text-decoration-color: rgb(246, 231, 29);
+            text-decoration-color: rgb(246, 231, 29);
+  }
+  .content p:nth-child(3) {
+    font-size: 2.5rem;
+  }
 }
 
 .imageContainer {
@@ -93,5 +93,4 @@ section {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  filter: drop-shadow(5px 5px 5px rgba(252, 251, 251, 0.5));
 }/*# sourceMappingURL=home.css.map */

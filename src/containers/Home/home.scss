@@ -1,16 +1,15 @@
 @import '../../variables/globalMixins';
+@import '../../variables/variables';
 @import '../../variables/breakpoints';
 
 section {
+  @include flexCenter();
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   padding-top: 5rem;
   padding-left: 6rem;
   padding-right: 6rem;
-  background-color: black;
-  //   border: 1px solid black;
+  background-color: $blackColor;
+
   @include mobile {
     flex-wrap: wrap;
     padding: 6rem 0.5rem 0.5rem 0.5rem;
@@ -19,15 +18,10 @@ section {
 }
 .content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flexCenter(column);
   height: 65vh;
   align-items: stretch;
-  color: white;
-  @include mobile {
-    height: 50vh;
-  }
+  color: $fontGreyColor;
 
   p:first-child {
     font-size: 1.2rem;
@@ -35,12 +29,8 @@ section {
     letter-spacing: 2px;
   }
   h1 {
-    // font-size: 3.7rem;
     font-size: 4vw;
     font-weight: normal;
-    @include mobile {
-      font-size: 2.2rem;
-    }
   }
   p:nth-child(2) {
     font-size: 1.2rem;
@@ -48,38 +38,34 @@ section {
     margin: 2rem 0 1rem 0;
   }
   p:nth-child(3) {
-    // font-size: 5rem;
     font-size: 5vw;
-    @include mobile {
-      font-size: 2.5rem;
-    }
   }
   .mainTitle {
     min-height: 35vh;
-    // border: 1px solid white;
-    @include mobile {
-      min-height: 100px;
-    }
   }
   .callToAction {
     text-align: center;
     button {
-      background-color: transparent;
-      color: white;
-      font-size: 1.2rem;
-      border: 2px solid yellow;
-      border-radius: 5px;
-      padding: 0.7rem 3rem;
-      cursor: pointer;
-      transition: all 1s ease;
-
-      &:hover {
-        background-color: yellow;
-        color: black;
-      }
+      @include contactButton();
+    }
+  }
+  @include mobile {
+    height: 50vh;
+    justify-content: space-between;
+    .mainTitle {
+      min-height: 100px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      text-decoration: underline;
+      text-decoration-color: $brightYellow;
+    }
+    p:nth-child(3) {
+      font-size: 2.5rem;
     }
   }
 }
+
 .imageContainer {
   flex: 1;
   text-align: center;
@@ -88,6 +74,6 @@ section {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    filter: drop-shadow(5px 5px 5px rgba(252, 251, 251, 0.5));
+    // filter: drop-shadow(0px 0px 25px rgba(252, 251, 251, 0.5));
   }
 }

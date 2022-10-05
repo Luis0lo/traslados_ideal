@@ -1,4 +1,27 @@
-@mixin flexCenter(){
+@import './variables';
+
+@mixin flexCenter($direction: row) {
     display: flex;
-    justify-content: center;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: space-around;
 }
+
+@mixin contactButton() {
+  background-color: $goldColor;
+  color: $blackColor;
+  font-size: 1.2rem;
+  border: 2px solid $goldColor;
+  border-radius: 5px;
+  padding: 0.7rem 3rem;
+  cursor: pointer;
+  transition: all 1s ease;
+
+  &:hover {
+    background-color: $brightYellow;
+    color: $blackColor;
+  }
+}
+
+// https://medium.com/@seth.poulin/simplifying-sass-mixins-with-default-values-163da334a51e
+
