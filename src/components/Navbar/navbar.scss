@@ -19,7 +19,7 @@ header {
     background: transparent;
     border: none;
     outline: none;
-    color: white;
+    color: $blackColor;
     visibility: hidden;
     opacity: 0;
     font-size: 1.8rem;
@@ -35,7 +35,7 @@ header {
   }
 }
 .logo {
-  color: white;
+  color: $blackColor;
   text-decoration: none;
   font-size: 2rem;
   z-index: 1;
@@ -49,12 +49,20 @@ nav {
   padding-bottom: 9px;
 
   a {
+    font-weight: 500;
     margin: 0 2rem;
-    color: white;
+    color: $blackColor;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.6s ease;
+
     &:hover {
       color: black;
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
     }
   }
 
