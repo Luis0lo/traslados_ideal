@@ -37,6 +37,9 @@ header .nav-btn {
   font-size: 2rem;
   z-index: 1;
 }
+.logo:hover {
+  color: rgb(0, 0, 0);
+}
 
 nav {
   vertical-align: middle;
