@@ -1,0 +1,42 @@
+@import '../../variables/globalMixins';
+@import '../../variables/variables';
+@import '../../variables/breakpoints';
+
+#sobre {
+  @include flexCenter();
+  flex-wrap: wrap;
+  background-color: $lightBgColor;
+}
+.aboutImageContainer {
+  flex-basis: 50%;
+  height: 70vh;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.aboutDescription {
+  flex-basis: 50%;
+  color: $blackColor;
+  align-self: normal;
+  padding: 2.5rem 5rem;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  text-align: center;
+  @include flexCenter(column);
+  justify-content: space-evenly;
+}
+.aboutRodape {
+  flex-basis: 100%;
+  background-color: $blackColor;
+  color: $fontGreyColor;
+  padding: 2rem 0;
+  ul {
+    @include flexCenter();
+    list-style: none;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+}
