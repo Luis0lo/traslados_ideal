@@ -5,8 +5,8 @@
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: rgb(220, 220, 220);
+  box-sizing: none;
 }
-
 .aboutImageContainer {
   flex-basis: 50%;
   height: 70vh;
@@ -16,6 +16,11 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 640px) {
+  .aboutImageContainer {
+    display: none;
+  }
 }
 
 .aboutDescription {
@@ -32,6 +37,14 @@
   justify-content: space-around;
   justify-content: space-evenly;
 }
+@media (max-width: 640px) {
+  .aboutDescription {
+    flex-basis: 100%;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
 
 .aboutRodape {
   flex-basis: 100%;
@@ -47,4 +60,16 @@
   list-style: none;
   font-size: 1.3rem;
   letter-spacing: 1px;
+}
+@media (max-width: 640px) {
+  .aboutRodape {
+    padding: 1rem 0;
+  }
+  .aboutRodape ul {
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+  .aboutRodape li {
+    padding: 0.5rem;
+  }
 }/*# sourceMappingURL=about.css.map */

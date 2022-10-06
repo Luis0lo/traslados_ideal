@@ -6,6 +6,10 @@
   @include flexCenter();
   flex-wrap: wrap;
   background-color: $lightBgColor;
+  box-sizing: none;
+  @include mobile {
+    // background-color: red;
+  }
 }
 .aboutImageContainer {
   flex-basis: 50%;
@@ -15,6 +19,9 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+  @include mobile {
+    display: none;
   }
 }
 .aboutDescription {
@@ -27,6 +34,12 @@
   text-align: center;
   @include flexCenter(column);
   justify-content: space-evenly;
+  @include mobile {
+    flex-basis: 100%;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 }
 .aboutRodape {
   flex-basis: 100%;
@@ -38,5 +51,15 @@
     list-style: none;
     font-size: 1.3rem;
     letter-spacing: 1px;
+  }
+  @include mobile {
+    padding: 1rem 0;
+    ul {
+      flex-wrap: wrap;
+      font-size: 1rem;
+    }
+    li {
+      padding: 0.5rem;
+    }
   }
 }
