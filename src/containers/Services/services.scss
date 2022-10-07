@@ -1,0 +1,82 @@
+@import '../../variables/globalMixins';
+@import '../../variables/variables';
+@import '../../variables/breakpoints';
+
+#services {
+  background-color: white;
+  padding-top: 5rem;
+  min-height: 100vh;
+}
+.sectionTitle {
+  font-size: 4rem;
+}
+.contentContainer {
+  width: 70%;
+  margin: auto;
+}
+.wrapper {
+  height: 50vh;
+  margin: 2rem 0 4rem 0;
+  display: flex;
+}
+.servicesDescription {
+  flex: 1;
+  align-self: normal;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5rem;
+  color: grey;
+  button {
+    margin-top: 3rem;
+    @include contactButton();
+    font-size: 1rem;
+  }
+}
+.servicesList {
+  p {
+    border-bottom: 1px solid black;
+    background-color: $blackColor;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+    color: $fontGreyColor;
+  }
+  .card {
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    line-height: 2rem;
+    background-color: white;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  margin: auto;
+  flex: 1;
+  ul {
+    list-style: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  li {
+    padding: 0.2rem 0;
+  }
+}
+.servicesRodape {
+  background-color: $blackColor;
+  color: $fontGreyColor;
+  padding: 2rem 0;
+
+  ul {
+    @include flexCenter();
+    list-style: none;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+}

@@ -15,7 +15,7 @@ const Navbar = () => {
       <a className='logo' href="#bienvenido" >.IDEAL</a>
       <nav ref={navRef}>
         <a href="#sobre" onClick={showNavbar}>Sobre</a>
-        <a href="#servicios" onClick={showNavbar}>Servicios</a>
+        <a href="#services" onClick={showNavbar}>Servicios</a>
         <a href="#flota" onClick={showNavbar}>Flota</a>
         <a href="#contactos" onClick={showNavbar}>Contactos</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
