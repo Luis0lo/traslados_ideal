@@ -5,22 +5,38 @@
 #services {
   background-color: white;
   padding-top: 5rem;
-  min-height: 100vh;
+  @include mobile {
+    padding-top: 2rem;
+  }
 }
 .sectionTitle {
   font-size: 4rem;
+  @include mobile {
+    font-size: 2rem;
+  }
 }
 .contentContainer {
   width: 70%;
   margin: auto;
+  @include tablet {
+    width: 85%;
+  }
+  @include mobile {
+    width: 95%;
+  }
 }
 .wrapper {
-  height: 50vh;
+  min-height: 50vh;
   margin: 2rem 0 4rem 0;
   display: flex;
+  flex-wrap: wrap;
+  @include mobile {
+    margin: 1rem 0 2rem 0;
+  }
 }
 .servicesDescription {
   flex: 1;
+  flex-basis: 50%;
   align-self: normal;
   display: flex;
   align-items: center;
@@ -32,9 +48,13 @@
     margin-top: 3rem;
     @include contactButton();
     font-size: 1rem;
+    @include tablet {
+      margin: 2rem 0 1rem 0;
+    }
   }
 }
 .servicesList {
+//   padding: 1rem;
   p {
     border-bottom: 1px solid black;
     background-color: $blackColor;
@@ -78,5 +98,15 @@
     list-style: none;
     font-size: 1.3rem;
     letter-spacing: 1px;
+  }
+  @include tablet {
+    padding: 1rem 0;
+    ul {
+      flex-wrap: wrap;
+      font-size: 1rem;
+    }
+    li {
+      padding: 0.5rem;
+    }
   }
 }

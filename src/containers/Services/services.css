@@ -1,26 +1,52 @@
 #services {
   background-color: white;
   padding-top: 5rem;
-  min-height: 100vh;
+}
+@media (max-width: 640px) {
+  #services {
+    padding-top: 2rem;
+  }
 }
 
 .sectionTitle {
   font-size: 4rem;
+}
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
 }
 
 .contentContainer {
   width: 70%;
   margin: auto;
 }
+@media (max-width: 768px) {
+  .contentContainer {
+    width: 85%;
+  }
+}
+@media (max-width: 640px) {
+  .contentContainer {
+    width: 95%;
+  }
+}
 
 .wrapper {
-  height: 50vh;
+  min-height: 50vh;
   margin: 2rem 0 4rem 0;
   display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+  .wrapper {
+    margin: 1rem 0 2rem 0;
+  }
 }
 
 .servicesDescription {
   flex: 1;
+  flex-basis: 50%;
   align-self: normal;
   display: flex;
   align-items: center;
@@ -44,6 +70,11 @@
 .servicesDescription button:hover {
   background-color: rgb(246, 231, 29);
   color: rgb(24, 24, 24);
+}
+@media (max-width: 768px) {
+  .servicesDescription button {
+    margin: 2rem 0 1rem 0;
+  }
 }
 
 .servicesList {
@@ -94,4 +125,16 @@
   list-style: none;
   font-size: 1.3rem;
   letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  .servicesRodape {
+    padding: 1rem 0;
+  }
+  .servicesRodape ul {
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+  .servicesRodape li {
+    padding: 0.5rem;
+  }
 }/*# sourceMappingURL=services.css.map */
