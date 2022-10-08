@@ -15,6 +15,7 @@ function About() {
       </div>
       <div className="aboutDescription">
         <p>Somos la opcion IDEAL para transladarte.</p>
+        <br />
         <p>
           Una passion de adolescentes por explorar la ciudad y zonas
           emblematicas de Venezuela se convirtio en nuestro dia a dia como

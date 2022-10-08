@@ -12,6 +12,7 @@
 .sectionTitle {
   font-size: 4rem;
   @include mobile {
+    text-align: center;
     font-size: 2rem;
   }
 }

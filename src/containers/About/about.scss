@@ -7,9 +7,6 @@
   flex-wrap: wrap;
   background-color: $lightBgColor;
   box-sizing: none;
-  @include mobile {
-    // background-color: red;
-  }
 }
 .aboutImageContainer {
   flex-basis: 50%;
@@ -28,12 +25,18 @@
   flex-basis: 50%;
   color: $blackColor;
   align-self: normal;
-  padding: 2.5rem 5rem;
+  padding: 0 2rem;
   font-size: 1.5rem;
+  font-size: 1.5vw;
   line-height: 2.3rem;
   text-align: center;
   @include flexCenter(column);
-  justify-content: space-evenly;
+  justify-content: center;
+  @include tablet {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    line-height: 2.3rem;
+  }
   @include mobile {
     flex-basis: 100%;
     padding: 2rem 1rem;
