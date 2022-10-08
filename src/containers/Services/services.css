@@ -78,8 +78,14 @@
 }
 
 .servicesList {
+  padding: 2rem 1rem;
   margin: auto;
   flex: 1;
+}
+@media (max-width: 640px) {
+  .servicesList {
+    padding: 1rem 0 0 0;
+  }
 }
 .servicesList p {
   border-bottom: 1px solid black;
