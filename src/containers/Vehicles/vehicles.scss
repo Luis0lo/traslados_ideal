@@ -1,0 +1,114 @@
+@import '../../variables/globalMixins';
+@import '../../variables/variables';
+@import '../../variables/breakpoints';
+
+#vehicles {
+  background-color: white;
+  padding-top: 5rem;
+  @include mobile {
+    padding-top: 2rem;
+  }
+}
+.sectionTitle {
+  font-size: 4rem;
+  @include mobile {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+.contentContainer {
+  width: 70%;
+  margin: auto;
+  @include tablet {
+    width: 85%;
+  }
+  @include mobile {
+    width: 95%;
+  }
+}
+.flotaDescription {
+  padding-bottom: 1rem;
+}
+.wrapperVehicules {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 2px;
+    background: grey;
+    margin: auto;
+    top: 100%;
+    width: 50%;
+    left: 25%;
+  }
+
+  @include mobile {
+    margin: 1rem 0 2rem 0;
+    &:after {
+      display: none;
+    }
+  }
+  .vehicleImageContainer {
+    flex-basis: 50%;
+    min-width: 320px;
+    img {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  .characteristicsVehicleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+    padding: 1rem 1rem 1rem 6rem;
+    @include tablet {
+      flex-basis: 100%;
+      padding: 1rem;
+    }
+  }
+  h4 {
+    font-size: 1.5rem;
+    @include mobile {
+      text-align: center;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 1rem 0;
+  }
+  .mainCaracteristics {
+    display: flex;
+    @include mobile {
+      justify-content: space-around;
+    }
+    margin-bottom: 1rem;
+    .seats {
+      display: flex;
+      align-items: center;
+    }
+    .passangerNumberP {
+      padding-left: 0.3rem;
+    }
+    .luggage {
+      display: flex;
+      align-items: center;
+    }
+  }
+  #selectCarLink {
+    text-align: center;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.3rem;
+    text-decoration: none;
+    @include tablet {
+      display: block;
+      width: 100%;
+    }
+  }
+}

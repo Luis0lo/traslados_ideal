@@ -1,0 +1,131 @@
+#vehicles {
+  background-color: white;
+  padding-top: 5rem;
+}
+@media (max-width: 640px) {
+  #vehicles {
+    padding-top: 2rem;
+  }
+}
+
+.sectionTitle {
+  font-size: 4rem;
+}
+@media (max-width: 640px) {
+  .sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+.contentContainer {
+  width: 70%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .contentContainer {
+    width: 85%;
+  }
+}
+@media (max-width: 640px) {
+  .contentContainer {
+    width: 95%;
+  }
+}
+
+.flotaDescription {
+  padding-bottom: 1rem;
+}
+
+.wrapperVehicules {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapperVehicules:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background: grey;
+  margin: auto;
+  top: 100%;
+  width: 50%;
+  left: 25%;
+}
+@media (max-width: 640px) {
+  .wrapperVehicules {
+    margin: 1rem 0 2rem 0;
+  }
+  .wrapperVehicules:after {
+    display: none;
+  }
+}
+.wrapperVehicules .vehicleImageContainer {
+  flex-basis: 50%;
+  min-width: 320px;
+}
+.wrapperVehicules .vehicleImageContainer img {
+  width: 100%;
+  padding: 1rem;
+}
+.wrapperVehicules .characteristicsVehicleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 50%;
+  padding: 1rem 1rem 1rem 6rem;
+}
+@media (max-width: 768px) {
+  .wrapperVehicules .characteristicsVehicleContainer {
+    flex-basis: 100%;
+    padding: 1rem;
+  }
+}
+.wrapperVehicules h4 {
+  font-size: 1.5rem;
+}
+@media (max-width: 640px) {
+  .wrapperVehicules h4 {
+    text-align: center;
+  }
+}
+.wrapperVehicules ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+.wrapperVehicules .mainCaracteristics {
+  display: flex;
+  margin-bottom: 1rem;
+}
+@media (max-width: 640px) {
+  .wrapperVehicules .mainCaracteristics {
+    justify-content: space-around;
+  }
+}
+.wrapperVehicules .mainCaracteristics .seats {
+  display: flex;
+  align-items: center;
+}
+.wrapperVehicules .mainCaracteristics .passangerNumberP {
+  padding-left: 0.3rem;
+}
+.wrapperVehicules .mainCaracteristics .luggage {
+  display: flex;
+  align-items: center;
+}
+.wrapperVehicules #selectCarLink {
+  text-align: center;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.3rem;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .wrapperVehicules #selectCarLink {
+    display: block;
+    width: 100%;
+  }
+}/*# sourceMappingURL=vehicles.css.map */

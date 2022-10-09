@@ -19,7 +19,7 @@ function Home() {
         </div>
       </div>
       <div className="imageContainer">
-        <img src="images/jeep.png" alt="" />
+        <img src="images/jeep.png" alt="jeep grand cherokee" />
       </div>
     </section>
   );
