@@ -19,6 +19,7 @@
 .contentContainer {
   width: 70%;
   margin: auto;
+  margin-bottom: 2rem;
   @include tablet {
     width: 85%;
   }
@@ -101,11 +102,20 @@
   }
   #selectCarLink {
     text-align: center;
+    color: $blackColor;
+    background-color: $goldColor;
+
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid $goldColor;
     border-radius: 5px;
     padding: 0.3rem;
     text-decoration: none;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $brightYellow;
+      color: $blackColor;
+    }
     @include tablet {
       display: block;
       width: 100%;
