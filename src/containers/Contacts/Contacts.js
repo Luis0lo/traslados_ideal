@@ -1,5 +1,35 @@
 import './contacts.css';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+
 function Contacts() {
+  const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+      (result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: 'success',
+          title: 'Mensaje Enviada',
+        });
+        e.target.reset();
+      },
+      (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: 'error',
+          title: 'Ooops, algo salio mal',
+          text: error.text,
+        });
+        e.target.reset();
+      }
+    );
+  };
+
   return (
     <section id="contacts">
       <div className="contentContainerContacts">
@@ -10,7 +40,7 @@ function Contacts() {
           <br />
           Te contactaremos lo más pronto posible
         </p>
-        <form action="">
+        <form onSubmit={handleOnSubmit}>
           <div className="formContainer">
             <div className="essentialInputs">
               <label htmlFor="name">Nombre</label>
@@ -28,9 +58,15 @@ function Contacts() {
               <label htmlFor="serviceType">Tipo de Servicio</label>
               <br />
               <select name="serviceType" id="serviceType">
-                <option value="cityTransfers">Dentro de Caracas</option>
-                <option value="countryTransfers">Fuera de Caracas</option>
-                <option value="airportTransfer">Aeropuerto</option>
+                <option value="Traslados dentro de caracas">
+                  Dentro de Caracas
+                </option>
+                <option value="Traslados fuera de caracas">
+                  Fuera de Caracas
+                </option>
+                <option value="traslado para / del aeropuerto">
+                  Aeropuerto
+                </option>
                 <option value="fullday">Fullday</option>
               </select>
               <br />
