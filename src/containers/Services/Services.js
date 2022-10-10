@@ -13,7 +13,7 @@ function Services() {
 
   return (
     <section id="services">
-      <div className="contentContainer">
+      <div className="contentContainerServices">
         <p className="sectionTitle">Servicios</p>
         <div className="wrapper">
           <div className="servicesDescription">

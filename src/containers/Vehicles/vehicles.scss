@@ -5,18 +5,19 @@
 #vehicles {
   background-color: white;
   padding-top: 5rem;
+  .sectionTitle {
+    font-size: 4rem;
+    @include mobile {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
   @include mobile {
     padding-top: 2rem;
   }
 }
-.sectionTitle {
-  font-size: 4rem;
-  @include mobile {
-    text-align: center;
-    font-size: 2rem;
-  }
-}
-.contentContainer {
+
+.contentContainerVehicles {
   width: 70%;
   margin: auto;
   margin-bottom: 2rem;

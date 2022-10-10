@@ -2,34 +2,33 @@
   background-color: white;
   padding-top: 5rem;
 }
+#vehicles .sectionTitle {
+  font-size: 4rem;
+}
+@media (max-width: 640px) {
+  #vehicles .sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
 @media (max-width: 640px) {
   #vehicles {
     padding-top: 2rem;
   }
 }
 
-.sectionTitle {
-  font-size: 4rem;
-}
-@media (max-width: 640px) {
-  .sectionTitle {
-    text-align: center;
-    font-size: 2rem;
-  }
-}
-
-.contentContainer {
+.contentContainerVehicles {
   width: 70%;
   margin: auto;
   margin-bottom: 2rem;
 }
 @media (max-width: 768px) {
-  .contentContainer {
+  .contentContainerVehicles {
     width: 85%;
   }
 }
 @media (max-width: 640px) {
-  .contentContainer {
+  .contentContainerVehicles {
     width: 95%;
   }
 }

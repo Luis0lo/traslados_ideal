@@ -28,7 +28,7 @@ function Vehicles() {
 
   return (
     <section id="vehicles">
-      <div className="contentContainer">
+      <div className="contentContainerVehicles">
         <p className="sectionTitle">Flota</p>
         <br />
         <p className='flotaDescription'>

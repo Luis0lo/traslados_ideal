@@ -8,15 +8,16 @@
   @include mobile {
     padding-top: 2rem;
   }
-}
-.sectionTitle {
-  font-size: 4rem;
-  @include mobile {
-    text-align: center;
-    font-size: 2rem;
+  .sectionTitle {
+    font-size: 4rem;
+    @include mobile {
+      text-align: center;
+      font-size: 2rem;
+    }
   }
 }
-.contentContainer {
+
+.contentContainerServices {
   width: 70%;
   margin: auto;
   @include tablet {

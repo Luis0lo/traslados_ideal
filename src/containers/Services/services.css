@@ -7,28 +7,27 @@
     padding-top: 2rem;
   }
 }
-
-.sectionTitle {
+#services .sectionTitle {
   font-size: 4rem;
 }
 @media (max-width: 640px) {
-  .sectionTitle {
+  #services .sectionTitle {
     text-align: center;
     font-size: 2rem;
   }
 }
 
-.contentContainer {
+.contentContainerServices {
   width: 70%;
   margin: auto;
 }
 @media (max-width: 768px) {
-  .contentContainer {
+  .contentContainerServices {
     width: 85%;
   }
 }
 @media (max-width: 640px) {
-  .contentContainer {
+  .contentContainerServices {
     width: 95%;
   }
 }
