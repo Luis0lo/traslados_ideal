@@ -36,7 +36,7 @@ function Vehicles() {
           de transporte.
         </p>
         {vehiclesList.map((vehicle) => (
-          <div key={vehicle.name} className="wrapperVehicules">
+          <div key={vehicle.model} className="wrapperVehicules">
             <div className="vehicleImageContainer">
               <img src={vehicle.imageUrl} alt="jeep grand cherokee" />
             </div>

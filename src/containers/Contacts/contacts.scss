@@ -1,0 +1,111 @@
+@import '../../variables/globalMixins';
+@import '../../variables/variables';
+@import '../../variables/breakpoints';
+
+#contacts {
+  padding-top: 5rem;
+  background-color: $lightBgColor;
+
+  .sectionTitle {
+    font-size: 4rem;
+    @include mobile {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+  @include mobile {
+    padding-top: 2rem;
+  }
+}
+.contentContainerContacts {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 2rem;
+  @include tablet {
+    width: 85%;
+  }
+  @include mobile {
+    width: 90%;
+  }
+}
+.flotaDescription {
+  padding-bottom: 1rem;
+}
+form {
+  padding: 1rem 0;
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    line-height: 1.8rem;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  button {
+    display: block;
+    @include contactButton();
+    padding: 0.5rem 3rem;
+    margin: 1rem auto;
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
+form .formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 3rem;
+  @include mobile {
+    gap: 0;
+  }
+}
+form .essentialInputs {
+  flex: 1;
+}
+
+form .nonEssentialInputs {
+  flex: 1;
+  img {
+    width: 12vw;
+    @include mobile {
+      width: 40vw;
+    }
+  }
+  input[type='radio'] {
+    display: none;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+
+  img:active {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  input[type='radio'] + label > img {
+    border: 2px solid transparent;
+    padding: 0 1rem;
+    border-radius: 10px;
+
+    transition: all 1s ease;
+  }
+  input[type='radio']:checked + label > img {
+    border: 2px solid rgb(243, 219, 86);
+    background-color: $fontGreyColor;
+  }
+  fieldset {
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+  }
+}

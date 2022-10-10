@@ -1,1 +1,133 @@
-/*# sourceMappingURL=contacts.css.map */
+#contacts {
+  padding-top: 5rem;
+  background-color: rgb(220, 220, 220);
+}
+#contacts .sectionTitle {
+  font-size: 4rem;
+}
+@media (max-width: 640px) {
+  #contacts .sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 640px) {
+  #contacts {
+    padding-top: 2rem;
+  }
+}
+
+.contentContainerContacts {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .contentContainerContacts {
+    width: 85%;
+  }
+}
+@media (max-width: 640px) {
+  .contentContainerContacts {
+    width: 90%;
+  }
+}
+
+.flotaDescription {
+  padding-bottom: 1rem;
+}
+
+form {
+  padding: 1rem 0;
+}
+form input,
+form select,
+form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  line-height: 1.8rem;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+form button {
+  display: block;
+  background-color: rgb(245, 209, 13);
+  color: rgb(24, 24, 24);
+  font-size: 1.2rem;
+  border: 2px solid rgb(245, 209, 13);
+  border-radius: 5px;
+  padding: 0.7rem 3rem;
+  cursor: pointer;
+  transition: all 1s ease;
+  padding: 0.5rem 3rem;
+  margin: 1rem auto;
+}
+form button:hover {
+  background-color: rgb(246, 231, 29);
+  color: rgb(24, 24, 24);
+}
+@media (max-width: 768px) {
+  form button {
+    width: 100%;
+  }
+}
+
+form .formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 3rem;
+}
+@media (max-width: 640px) {
+  form .formContainer {
+    gap: 0;
+  }
+}
+
+form .essentialInputs {
+  flex: 1;
+}
+
+form .nonEssentialInputs {
+  flex: 1;
+}
+form .nonEssentialInputs img {
+  width: 12vw;
+}
+@media (max-width: 640px) {
+  form .nonEssentialInputs img {
+    width: 40vw;
+  }
+}
+form .nonEssentialInputs input[type=radio] {
+  display: none;
+}
+form .nonEssentialInputs img:hover {
+  cursor: pointer;
+}
+form .nonEssentialInputs img:active {
+  opacity: 0.4;
+  cursor: pointer;
+}
+form .nonEssentialInputs input[type=radio] + label > img {
+  border: 2px solid transparent;
+  padding: 0 1rem;
+  border-radius: 10px;
+  transition: all 1s ease;
+}
+form .nonEssentialInputs input[type=radio]:checked + label > img {
+  border: 2px solid rgb(243, 219, 86);
+  background-color: rgb(207, 207, 207);
+}
+form .nonEssentialInputs fieldset {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+}/*# sourceMappingURL=contacts.css.map */
