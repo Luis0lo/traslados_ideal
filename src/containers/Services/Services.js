@@ -32,7 +32,7 @@ function Services() {
               Porque conocemos las mejores rutas y horas para trasladarse,
               estamos disponibles para ayudarlo a planificar sus viajes.{' '}
             </p>
-            <button>CONTACTOS</button>
+            <a href='#contacts' id='callToActionAnchor'>CONTACTOS</a>
           </div>
           <div className="servicesList">
             <div className="card">
