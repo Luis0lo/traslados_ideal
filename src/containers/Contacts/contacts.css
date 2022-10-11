@@ -20,7 +20,6 @@
 .contentContainerContacts {
   width: 70%;
   margin: auto;
-  margin-bottom: 2rem;
 }
 @media (max-width: 768px) {
   .contentContainerContacts {

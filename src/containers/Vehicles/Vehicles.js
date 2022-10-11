@@ -2,7 +2,7 @@ import './vehicles.css';
 import { TiGroup } from 'react-icons/ti';
 import { GiSuitcase } from 'react-icons/gi';
 
-function Vehicles() {
+function Vehicles({ setVehicle }) {
   let vehiclesList = [
     {
       imageUrl: 'images/jeepflip.png',
@@ -26,12 +26,16 @@ function Vehicles() {
     },
   ];
 
+  const handleOnClick = (e) => {
+    setVehicle(e.target.getAttribute('data-value'));
+  };
+
   return (
     <section id="vehicles">
       <div className="contentContainerVehicles">
         <p className="sectionTitle">Flota</p>
         <br />
-        <p className='flotaDescription'>
+        <p className="flotaDescription">
           .IDEAL dispone de diferentes vehiculos para satisfacer sus necesidades
           de transporte.
         </p>
@@ -65,7 +69,12 @@ function Vehicles() {
                   </p>
                 </div>
               </div>
-              <a id="selectCarLink" href="#contacts">
+              <a
+                id="selectCarLink"
+                href="#contacts"
+                data-value={vehicle.model}
+                onClick={(e) => handleOnClick(e)}
+              >
                 Seleccionar
               </a>
             </div>

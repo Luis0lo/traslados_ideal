@@ -2,7 +2,7 @@ import './contacts.css';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
-function Contacts() {
+function Contacts({ vehicle, setVehicle }) {
   const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
@@ -30,6 +30,13 @@ function Contacts() {
     );
   };
 
+  const handleChange = (e) => {
+    if (vehicle === 'Jeep Grand Cherokee') {
+      setVehicle('Chevrolet Luv Dmax');
+    } else {
+      setVehicle('Jeep Grand Cherokee');
+    }
+  };
   return (
     <section id="contacts">
       <div className="contentContainerContacts">
@@ -100,22 +107,26 @@ function Contacts() {
               <fieldset>
                 <legend>Vehicles</legend>
                 <input
+                  onChange={handleChange}
+                  checked={vehicle === 'Jeep Grand Cherokee'}
                   value="Jeep Cherokee"
                   type="radio"
                   id="JeepCherokee"
                   name="vehicle"
                 />
                 <label htmlFor="JeepCherokee">
-                  <img src="images/jeepflip.png" alt="jeep cherokee" />
+                  <img src="images/jeepflip.png" alt="Jeep Cherokee" />
                 </label>
                 <input
-                  value="Chevrolet Dmax"
+                  onChange={handleChange}
+                  checked={vehicle === 'Chevrolet Luv Dmax'}
+                  value="Chevrolet Luv Dmax"
                   type="radio"
                   id="ChevroletDmax"
                   name="vehicle"
                 />
                 <label htmlFor="ChevroletDmax">
-                  <img src="images/pickup.png" alt="jeep cherokee" />
+                  <img src="images/pickup.png" alt="Chevrolet Dmax" />
                 </label>
               </fieldset>
             </div>
