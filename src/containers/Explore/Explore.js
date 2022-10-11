@@ -21,7 +21,7 @@ function Explore() {
         <br />
         <div className="imagesContainer">
           {galleryImages.map((image) => (
-            <div className="card">
+            <div key={image} className="card">
               <img alt={image} src={image} />
             </div>
           ))}

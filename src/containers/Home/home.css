@@ -74,7 +74,7 @@
   }
   .content h1 {
     font-size: 2.2rem;
-    text-decoration: underline;
+    color: rgb(246, 231, 29);
     -webkit-text-decoration-color: rgb(246, 231, 29);
             text-decoration-color: rgb(246, 231, 29);
   }
