@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import SocialMedia from './components/SocialMedia/SocialMedia';
 import About from './containers/About/About';
 import Contacts from './containers/Contacts/Contacts';
 import Explore from './containers/Explore/Explore';
@@ -13,12 +14,13 @@ function App() {
 
   return (
     <div className="App">
+      <SocialMedia />
       <Navbar />
       <Home />
       <About />
       <Services />
       <Vehicles setVehicle={setVehicle} />
-      <Explore/>
+      <Explore />
       <Contacts vehicle={vehicle} setVehicle={setVehicle} />
     </div>
   );
