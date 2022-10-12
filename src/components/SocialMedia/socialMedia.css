@@ -1,18 +1,36 @@
-.socialContainer a {
-  color: rgb(245, 209, 13);
-  background-color: rgb(24, 24, 24);
-  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
-  border-radius: 15px 0 0 15px;
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
   position: fixed;
-  top: 90vh;
+  top: 80vh;
   right: 0;
+}
+.socialContainer .iconW,
+.socialContainer .iconI {
+  font-size: 2rem;
+}
+@media (max-width: 640px) {
+  .socialContainer {
+    right: 88vw;
+    top: 80vh;
+    z-index: 1;
+  }
+}
+.socialContainer :hover {
+  transition: color 1s ease;
+  background-color: rgb(24, 24, 24);
+  color: rgb(245, 209, 13);
+}
+.socialContainer a {
+  background-color: rgb(169, 169, 169);
+  color: rgb(24, 24, 24);
+  padding: 0.4rem 2.5rem 0.4rem 0.4rem;
+  border-radius: 15px 0 0 15px;
 }
 @media (max-width: 640px) {
   .socialContainer a {
     padding: 0.2rem 0.3rem 0.2rem 1.5rem;
     border-radius: 0 15px 15px 0;
-    right: 87vw;
-    top: 94vh;
-    z-index: 1;
   }
 }/*# sourceMappingURL=socialMedia.css.map */

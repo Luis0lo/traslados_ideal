@@ -1,20 +1,35 @@
 @import '../../variables/variables';
 @import '../../variables/breakpoints';
 .socialContainer {
-  a {
-    color: $goldColor;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  position: fixed;
+  top: 80vh;
+  right: 0;
+  .iconW,
+  .iconI {
+    font-size: 2rem;
+  }
+  @include mobile {
+    right: 88vw;
+    top: 80vh;
+    z-index: 1;
+  }
+  :hover {
+    transition: color 1s ease;
     background-color: $blackColor;
-    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+    color: $goldColor;
+  }
+  a {
+    background-color: $greyDarkColor;
+    color: $blackColor;
+    padding: 0.4rem 2.5rem 0.4rem 0.4rem;
     border-radius: 15px 0 0 15px;
-    position: fixed;
-    top: 90vh;
-    right: 0;
+
     @include mobile {
       padding: 0.2rem 0.3rem 0.2rem 1.5rem;
       border-radius: 0 15px 15px 0;
-      right: 87vw;
-      top: 94vh;
-      z-index: 1;
     }
   }
 }
