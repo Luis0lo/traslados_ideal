@@ -31,7 +31,9 @@ function Contacts({ vehicle, setVehicle }) {
   };
 
   const handleChange = (e) => {
-    if (vehicle === 'Jeep Grand Cherokee') {
+    if (!vehicle) {
+      setVehicle(e.target.value);
+    } else if (vehicle === 'Jeep Grand Cherokee') {
       setVehicle('Chevrolet Luv Dmax');
     } else {
       setVehicle('Jeep Grand Cherokee');
