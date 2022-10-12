@@ -45,22 +45,41 @@ function Contacts({ vehicle, setVehicle }) {
         <p className="sectionTitle">Contactos</p>
         <br />
         <p className="contactsDescription">
-          Llene el formulario o envienos un correo electronico directamente
+          Llene el formulario, contactenos por{' '}
+          <a
+            aria-label="WhatsApp"
+            style={{ color: 'black' }}
+            href="https://wa.me/584242426636"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            whatsapp
+          </a>{' '}
+          o envienos un{' '}
+          <a
+            aria-label="email"
+            style={{ color: 'black' }}
+            href="mailto:inv.ideal@hotmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            email
+          </a>
           <br />
           Te contactaremos lo más pronto posible
         </p>
         <form onSubmit={handleOnSubmit}>
           <div className="formContainer">
             <div className="essentialInputs">
-              <label htmlFor="name">Nombre</label>
+              <label htmlFor="name">Nombre*</label>
               <br />
               <input name="name" type="text" id="name" required />
               <br />
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email*</label>
               <br />
               <input name="email" type="email" id="email" required />
               <br />
-              <label htmlFor="mobile">Telefono</label>
+              <label htmlFor="mobile">Telefono*</label>
               <br />
               <input name="number" type="text" id="mobile" required />
               <br />
@@ -77,9 +96,10 @@ function Contacts({ vehicle, setVehicle }) {
                   Aeropuerto
                 </option>
                 <option value="fullday">Fullday</option>
+                <option value="otro">Otro</option>
               </select>
               <br />
-              <label htmlFor="message">Mensaje</label>
+              <label htmlFor="message">Comentarios</label>
               <br />
               <textarea
                 name="message"
