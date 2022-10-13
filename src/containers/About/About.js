@@ -1,4 +1,4 @@
-import './about.css'
+import './about.css';
 
 function About() {
   let values = [
@@ -17,10 +17,10 @@ function About() {
         <p>Somos la opcion IDEAL para transladarte.</p>
         <br />
         <p>
-          Una passion de adolescentes por explorar la ciudad y zonas
-          emblematicas de Venezuela se convirtio en nuestro dia a dia como
-          Choferes compartiendo con nuestros clientes lo mejor de moverse dentro
-          y fuera de la ciudad ya sea por razones laborales o personales.
+          Una pasion de adolescentes por explorar la ciudad y zonas emblematicas
+          de Venezuela se convirtio en nuestro dia a dia como Choferes
+          compartiendo con nuestros clientes lo mejor de moverse dentro y fuera
+          de la ciudad ya sea por razones laborales o personales.
         </p>
       </div>
       <div className="aboutRodape">

@@ -127,11 +127,11 @@ function Contacts({ vehicle, setVehicle }) {
               <input name="destination" type="text" id="destination" />
               <br />
               <fieldset>
-                <legend>Vehicles</legend>
+                <legend>Vehiculos</legend>
                 <input
                   onChange={handleChange}
                   checked={vehicle === 'Jeep Grand Cherokee'}
-                  value="Jeep Cherokee"
+                  value="Jeep Grand Cherokee"
                   type="radio"
                   id="JeepCherokee"
                   name="vehicle"
