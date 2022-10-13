@@ -18,7 +18,7 @@ function About() {
         <br />
         <p>
           Una pasion de adolescentes por explorar la ciudad y zonas emblematicas
-          de Venezuela se convirtio en nuestro dia a dia como Choferes
+          de Venezuela se convirtio en nuestro dia a dia como conductores
           compartiendo con nuestros clientes lo mejor de moverse dentro y fuera
           de la ciudad ya sea por razones laborales o personales.
         </p>
