@@ -2,7 +2,7 @@ import './about.css';
 
 function About() {
   let values = [
-    'CONFORTO',
+    'CONFORT',
     'SEGURIDAD',
     'CONFIANZA',
     'DISCRECION',

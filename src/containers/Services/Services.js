@@ -4,7 +4,7 @@ function Services() {
   let locations = ['CARACAS', 'VALENCIA', 'MARACAY', 'LA GUAIRA', 'LOS TEQUES'];
   let services = [
     'Viajes de Negocios',
-    'Traslados al/del Aeropuerto',
+    'Traslados Aeropuerto',
     'Congresos/Conferencias',
     'Centro Comerciales',
     'Eventos',
@@ -19,8 +19,8 @@ function Services() {
           <div className="servicesDescription">
             <p>
               Porque no somos solo conductores, los servicios son hechos a la
-              medida del cliente porque entendemos que cada cliente tiene
-              diferente necesidades.
+              medida del cliente porque entendemos que cada uno tiene diferente
+              necesidades.
             </p>
             <br />
             <p>
@@ -32,7 +32,9 @@ function Services() {
               Porque conocemos las mejores rutas y horas para trasladarse,
               estamos disponibles para ayudarlo a planificar sus viajes.{' '}
             </p>
-            <a href='#contacts' id='callToActionAnchor'>CONTACTOS</a>
+            <a href="#contacts" id="callToActionAnchor">
+              CONTACTOS
+            </a>
           </div>
           <div className="servicesList">
             <div className="card">

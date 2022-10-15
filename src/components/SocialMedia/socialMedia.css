@@ -10,17 +10,21 @@
 .socialContainer .iconI {
   font-size: 2rem;
 }
+.socialContainer :hover {
+  transition: color 1s ease;
+  background-color: rgb(24, 24, 24);
+  color: rgb(245, 209, 13);
+}
 @media (max-width: 640px) {
   .socialContainer {
     right: 88vw;
     top: 80vh;
     z-index: 1;
   }
-}
-.socialContainer :hover {
-  transition: color 1s ease;
-  background-color: rgb(24, 24, 24);
-  color: rgb(245, 209, 13);
+  .socialContainer :hover {
+    background-color: rgb(169, 169, 169);
+    color: rgb(24, 24, 24);
+  }
 }
 .socialContainer a {
   background-color: rgb(169, 169, 169);

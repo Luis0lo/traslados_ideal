@@ -11,15 +11,19 @@
   .iconI {
     font-size: 2rem;
   }
-  @include mobile {
-    right: 88vw;
-    top: 80vh;
-    z-index: 1;
-  }
   :hover {
     transition: color 1s ease;
     background-color: $blackColor;
     color: $goldColor;
+  }
+  @include mobile {
+    right: 88vw;
+    top: 80vh;
+    z-index: 1;
+    :hover {
+      background-color: $greyDarkColor;
+      color: $blackColor;
+    }
   }
   a {
     background-color: $greyDarkColor;
