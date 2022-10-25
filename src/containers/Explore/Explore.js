@@ -1,6 +1,20 @@
+import { useContext } from 'react';
+import { LanguageContext } from '../../context/LanguageContext';
 import './explore.css';
 
+const text = {
+  en: {
+    title: 'Explore',
+    p1: 'After business...',
+  },
+  es: {
+    title: 'Explora',
+    p1: 'Porque no todo es Business',
+  },
+};
 function Explore() {
+  const { language } = useContext(LanguageContext);
+
   const galleryImages = [
     'images/playa.webp',
     'images/postres.jpg',
@@ -15,9 +29,9 @@ function Explore() {
   return (
     <section id="explore">
       <div className="contentContainerExplore">
-        <p className="sectionTitle">Explora</p>
+        <p className="sectionTitle">{text[language].title}</p>
         <br />
-        <p className="flotaDescription">Porque no todo es business</p>
+        <p className="flotaDescription">{text[language].p1}</p>
         <br />
         <div className="imagesContainer">
           {galleryImages.map((image) => (

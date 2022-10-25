@@ -2,10 +2,7 @@ import './home.css';
 import { useContext } from 'react';
 import { LanguageContext } from '../../context/LanguageContext';
 
-function Home() {
-  const { language } = useContext(LanguageContext);
-
-  const text = {
+const text = {
     en: {
       slogan: "IT'S NOT WHERE YOU GET BUT HOW YOU GET THERE",
       title: 'Executive Transfers',
@@ -21,6 +18,9 @@ function Home() {
       cutton: 'CONTACTOS',
     },
   };
+
+function Home() {
+  const { language } = useContext(LanguageContext);
 
   return (
     <section id="bienvenido">

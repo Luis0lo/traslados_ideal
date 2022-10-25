@@ -1,30 +1,72 @@
+import { useContext } from 'react';
+import { LanguageContext } from '../../context/LanguageContext';
 import './vehicles.css';
 import { TiGroup } from 'react-icons/ti';
 import { GiSuitcase } from 'react-icons/gi';
 
+const text = {
+  en: {
+    title: 'Fleet',
+    p1: '.IDEAL has different vehicles to meet your transportation needs.',
+    maxSeats: ['Max', 'people'],
+    maxLuggage: ['Max', 'luggage'],
+    vehiclesList: [
+      {
+        imageUrl: 'images/jeepflip.png',
+        model: 'Jeep Grand Cherokee',
+        seatType: 'Leather seats',
+        color: 'Withe color',
+        traction: 'Traction 4x4',
+        windows: 'Tinted windows',
+        seatsNumber: 4,
+        bagage: 4,
+      },
+      {
+        imageUrl: 'images/pickup.png',
+        model: 'Chevrolet Luv Dmax',
+        seatType: 'Leather seats',
+        color: 'Blue color',
+        traction: 'Traction 4x4',
+        windows: 'Tinted windows',
+        seatsNumber: 4,
+        bagage: 4,
+      },
+    ],
+    button: 'Select',
+  },
+  es: {
+    title: 'Flota',
+    p1: '.IDEAL dispone de diferentes vehículos para satisfacer sus necesidades de transporte.',
+    maxSeats: ['Maximo', 'pasajeros'],
+    maxLuggage: ['Maximo', 'maletas'],
+    vehiclesList: [
+      {
+        imageUrl: 'images/jeepflip.png',
+        model: 'Jeep Grand Cherokee',
+        seatType: 'Asientos de cuero',
+        color: 'Color Blanco',
+        traction: 'Traccion 4x4',
+        windows: 'Vidrios ahumados',
+        seatsNumber: 4,
+        bagage: 4,
+      },
+      {
+        imageUrl: 'images/pickup.png',
+        model: 'Chevrolet Luv Dmax',
+        seatType: 'Asientos de cuero',
+        color: 'Color azul',
+        traction: 'Traccion 4x4',
+        windows: 'Vidrios ahumados',
+        seatsNumber: 4,
+        bagage: 4,
+      },
+    ],
+    button: 'Seleccionar',
+  },
+};
+
 function Vehicles({ setVehicle }) {
-  let vehiclesList = [
-    {
-      imageUrl: 'images/jeepflip.png',
-      model: 'Jeep Grand Cherokee',
-      seatType: 'Asientos de cuero',
-      color: 'Color Blanco',
-      traction: 'Traccion 4x4',
-      windows: 'Vidrios ahumados',
-      seatsNumber: 4,
-      bagage: 4,
-    },
-    {
-      imageUrl: 'images/pickup.png',
-      model: 'Chevrolet Luv Dmax',
-      seatType: 'Asientos de cuero',
-      color: 'Color azul',
-      traction: 'Traccion 4x4',
-      windows: 'Vidrios ahumados',
-      seatsNumber: 4,
-      bagage: 4,
-    },
-  ];
+  const { language } = useContext(LanguageContext);
 
   const handleOnClick = (e) => {
     setVehicle(e.target.getAttribute('data-value'));
@@ -33,13 +75,10 @@ function Vehicles({ setVehicle }) {
   return (
     <section id="vehicles">
       <div className="contentContainerVehicles">
-        <p className="sectionTitle">Flota</p>
+        <p className="sectionTitle">{text[language].title}</p>
         <br />
-        <p className="flotaDescription">
-          .IDEAL dispone de diferentes vehiculos para satisfacer sus necesidades
-          de transporte.
-        </p>
-        {vehiclesList.map((vehicle) => (
+        <p className="flotaDescription">{text[language].p1}</p>
+        {text[language].vehiclesList.map((vehicle) => (
           <div key={vehicle.model} className="wrapperVehicules">
             <div className="vehicleImageContainer">
               <img src={vehicle.imageUrl} alt="jeep grand cherokee" />
@@ -58,14 +97,16 @@ function Vehicles({ setVehicle }) {
                   {' '}
                   <TiGroup size="55" color="grey" />
                   <p className="passangerNumberP">
-                    Maximo <br /> 4 pasajeros
+                    {text[language].maxSeats[0]} <br /> 4{' '}
+                    {text[language].maxSeats[1]}
                   </p>
                 </div>
                 <div className="luggage">
                   {' '}
                   <GiSuitcase size="55" color="grey" />
                   <p>
-                    Maximo <br />4 maletas
+                    {text[language].maxLuggage[0]} <br /> 4{' '}
+                    {text[language].maxLuggage[1]}
                   </p>
                 </div>
               </div>
@@ -75,7 +116,7 @@ function Vehicles({ setVehicle }) {
                 data-value={vehicle.model}
                 onClick={(e) => handleOnClick(e)}
               >
-                Seleccionar
+                {text[language].button}
               </a>
             </div>
           </div>

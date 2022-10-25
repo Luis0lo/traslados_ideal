@@ -1,8 +1,60 @@
+import { useContext } from 'react';
+import { LanguageContext } from '../../context/LanguageContext';
 import './contacts.css';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
+const text = {
+  en: {
+    title: 'Contact us',
+    p1: ['Fill out the form, contact us by', 'or send us an'],
+    p2: 'We will contact you as soon as possible',
+    button: 'Submit',
+    fName: 'Name',
+    fEmail: 'Email',
+    fPhone: 'Phone',
+    fServiceType: 'Service type',
+    fServices: [
+      'Around Caracas',
+      'Out of Caracas',
+      'Airport Transfers',
+      'Full day',
+      'Other',
+    ],
+    fComments: 'Comments',
+    fDate: 'Date',
+    fHour: 'Departure hour',
+    fOrigem: 'Departure place address',
+    fDestine: 'Arrive place address',
+    fVehicles: 'Vehicles',
+  },
+  es: {
+    title: 'Contactos',
+    p1: ['Llene el formulario, contactenos por', 'o envienos un'],
+    p2: 'Te contactaremos lo más pronto posible',
+    button: 'Enviar',
+    fName: 'Nombre',
+    fEmail: 'Email',
+    fPhone: 'Telefono',
+    fServiceType: 'Tipo de Servicio',
+    fServices: [
+      'Dentro de Caracas',
+      'Fuera de Caracas',
+      'Aeropuerto',
+      'Fullday',
+      'Otro',
+    ],
+    fComments: 'Comentarios',
+    fDate: 'Fecha',
+    fHour: 'Hora de salida',
+    fOrigem: 'Lugar de salida',
+    fDestine: 'Lugar de destino',
+    fVehicles: 'Vehiculos',
+  },
+};
+
 function Contacts({ vehicle, setVehicle }) {
+  const { language } = useContext(LanguageContext);
   const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
@@ -42,10 +94,10 @@ function Contacts({ vehicle, setVehicle }) {
   return (
     <section id="contacts">
       <div className="contentContainerContacts">
-        <p className="sectionTitle">Contactos</p>
+        <p className="sectionTitle">{text[language].title}</p>
         <br />
         <p className="contactsDescription">
-          Llene el formulario, contactenos por{' '}
+          {text[language].p1[0]}{' '}
           <a
             aria-label="WhatsApp"
             style={{ color: 'black' }}
@@ -55,7 +107,7 @@ function Contacts({ vehicle, setVehicle }) {
           >
             whatsapp
           </a>{' '}
-          o envienos un{' '}
+          {text[language].p1[1]}{' '}
           <a
             aria-label="email"
             style={{ color: 'black' }}
@@ -66,40 +118,40 @@ function Contacts({ vehicle, setVehicle }) {
             email
           </a>
           <br />
-          Te contactaremos lo más pronto posible
+          {text[language].p2}
         </p>
         <form onSubmit={handleOnSubmit}>
           <div className="formContainer">
             <div className="essentialInputs">
-              <label htmlFor="name">Nombre*</label>
+              <label htmlFor="name">{text[language].fName}*</label>
               <br />
               <input name="name" type="text" id="name" required />
               <br />
-              <label htmlFor="email">Email*</label>
+              <label htmlFor="email">{text[language].fEmail}*</label>
               <br />
               <input name="email" type="email" id="email" required />
               <br />
-              <label htmlFor="mobile">Telefono*</label>
+              <label htmlFor="mobile">{text[language].fPhone}*</label>
               <br />
               <input name="number" type="text" id="mobile" required />
               <br />
-              <label htmlFor="serviceType">Tipo de Servicio</label>
+              <label htmlFor="serviceType">{text[language].fServiceType}</label>
               <br />
               <select name="serviceType" id="serviceType">
                 <option value="Traslados dentro de caracas">
-                  Dentro de Caracas
+                  {text[language].fServices[0]}
                 </option>
                 <option value="Traslados fuera de caracas">
-                  Fuera de Caracas
+                  {text[language].fServices[1]}
                 </option>
                 <option value="traslado para / del aeropuerto">
-                  Aeropuerto
+                  {text[language].fServices[2]}
                 </option>
-                <option value="fullday">Fullday</option>
-                <option value="otro">Otro</option>
+                <option value="fullday"> {text[language].fServices[3]}</option>
+                <option value="otro"> {text[language].fServices[4]}</option>
               </select>
               <br />
-              <label htmlFor="message">Comentarios</label>
+              <label htmlFor="message"> {text[language].fComments}</label>
               <br />
               <textarea
                 name="message"
@@ -110,24 +162,24 @@ function Contacts({ vehicle, setVehicle }) {
               <br />
             </div>
             <div className="nonEssentialInputs">
-              <label htmlFor="date">Fecha</label>
+              <label htmlFor="date">{text[language].fDate}</label>
               <br />
               <input name="date" type="date" id="date" />
               <br />
-              <label htmlFor="hour">Hora de salida</label>
+              <label htmlFor="hour">{text[language].fHour}</label>
               <br />
               <input name="time" type="time" id="hour" />
               <br />
-              <label htmlFor="origem">Lugar de inicio</label>
+              <label htmlFor="origem">{text[language].fOrigem}</label>
               <br />
               <input name="origem" type="text" id="origem" />
               <br />
-              <label htmlFor="destination">Lugar de destino</label>
+              <label htmlFor="destination">{text[language].fDestine}</label>
               <br />
               <input name="destination" type="text" id="destination" />
               <br />
               <fieldset>
-                <legend>Vehiculos</legend>
+                <legend>{text[language].fVehicles}</legend>
                 <input
                   onChange={handleChange}
                   checked={vehicle === 'Jeep Grand Cherokee'}
@@ -153,7 +205,7 @@ function Contacts({ vehicle, setVehicle }) {
               </fieldset>
             </div>
           </div>
-          <button type="submit">Enviar</button>
+          <button type="submit">{text[language].button}</button>
         </form>
       </div>{' '}
     </section>
