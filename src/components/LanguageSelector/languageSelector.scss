@@ -1,0 +1,30 @@
+@import '../../variables/globalMixins';
+@import '../../variables/variables';
+@import '../../variables/breakpoints';
+
+.languageSelectorContainer {
+  display: inline-flex;
+
+  .en,
+  .es {
+    padding: 0.3rem 0.5rem;
+    border: 1px solid $blackColor;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: transparent;
+    color: black;
+    min-width: 100px;
+  }
+  .en {
+    border-radius: 0px 5px 5px 0;
+  }
+  .es {
+    border-radius: 5px 0px 0px 5px;
+  }
+  button:disabled {
+    transition: all 0.5s ease;
+    background-color: $blackColor;
+    color: $lightBgColor;
+  }
+}

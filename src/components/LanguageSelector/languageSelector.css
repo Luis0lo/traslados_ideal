@@ -1,0 +1,25 @@
+.languageSelectorContainer {
+  display: inline-flex;
+}
+.languageSelectorContainer .en,
+.languageSelectorContainer .es {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid rgb(24, 24, 24);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: transparent;
+  color: black;
+  min-width: 100px;
+}
+.languageSelectorContainer .en {
+  border-radius: 0px 5px 5px 0;
+}
+.languageSelectorContainer .es {
+  border-radius: 5px 0px 0px 5px;
+}
+.languageSelectorContainer button:disabled {
+  transition: all 0.5s ease;
+  background-color: rgb(24, 24, 24);
+  color: rgb(220, 220, 220);
+}/*# sourceMappingURL=languageSelector.css.map */

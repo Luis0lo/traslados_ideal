@@ -15,7 +15,7 @@ const text = {
       title: 'Traslados Ejecutivos',
       where: 'DENTRO DE CARACAS Y PARA TODA',
       country: 'VENEZUELA',
-      cutton: 'CONTACTOS',
+      button: 'CONTACTOS',
     },
   };
 
