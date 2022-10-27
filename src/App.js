@@ -23,6 +23,9 @@ function App() {
   const [language, setLanguage] = useState(
     userLanguage === 'es' || userLanguage === 'en' ? userLanguage : 'en'
   );
+  useEffect(() => {
+    document.documentElement.setAttribute('lang', language);
+  }, [language]);
 
   return (
     <div className="App">
