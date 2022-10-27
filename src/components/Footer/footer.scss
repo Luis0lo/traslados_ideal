@@ -1,0 +1,18 @@
+@import '../../variables/globalMixins';
+@import '../../variables/variables';
+@import '../../variables/breakpoints';
+
+footer {
+  background-color: $greyDarkColor;
+  padding-top: 2rem;
+  text-align: center;
+  .designBy {
+    margin-top: 0.5rem;
+  }
+  .copyright {
+    background-color: $blackColor;
+    color: $lightBgColor;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,14 @@
+footer {
+  background-color: rgb(169, 169, 169);
+  padding-top: 2rem;
+  text-align: center;
+}
+footer .designBy {
+  margin-top: 0.5rem;
+}
+footer .copyright {
+  background-color: rgb(24, 24, 24);
+  color: rgb(220, 220, 220);
+  padding: 1rem;
+  margin-top: 1rem;
+}/*# sourceMappingURL=footer.css.map */

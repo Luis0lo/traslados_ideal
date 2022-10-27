@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import SocialMedia from './components/SocialMedia/SocialMedia';
 import About from './containers/About/About';
@@ -34,6 +35,7 @@ function App() {
         <Vehicles setVehicle={setVehicle} />
         <Explore />
         <Contacts vehicle={vehicle} setVehicle={setVehicle} />
+        <Footer/>
       </LanguageContext.Provider>
     </div>
   );
