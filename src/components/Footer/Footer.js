@@ -7,11 +7,11 @@ import './footer.css';
 const text = {
   en: {
     language: 'Language',
-    designBy: 'Website Design by',
+    designBy: 'Website Develop by',
   },
   es: {
     language: 'Idioma',
-    designBy: 'Website Diseñado por',
+    designBy: 'Página web desarrollada por',
   },
 };
 
