@@ -24,8 +24,8 @@ const text = {
     fComments: 'Comments',
     fDate: 'Date',
     fHour: 'Departure hour',
-    fOrigem: 'Departure place address',
-    fDestine: 'Arrive place address',
+    fOrigem: 'Departure address',
+    fDestine: 'Arrival address',
     fVehicles: 'Vehicles',
   },
   es: {
@@ -49,7 +49,7 @@ const text = {
     fHour: 'Hora de salida',
     fOrigem: 'Lugar de salida',
     fDestine: 'Lugar de destino',
-    fVehicles: 'Vehiculos',
+    fVehicles: 'Vehículos',
   },
 };
 
