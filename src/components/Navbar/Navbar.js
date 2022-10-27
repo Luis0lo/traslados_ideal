@@ -34,11 +34,11 @@ const Navbar = () => {
         <a href="#services" onClick={showNavbar}>{text[language].services}</a>
         <a href="#vehicles" onClick={showNavbar}>{text[language].vehicles}</a>
         <a href="#contacts" onClick={showNavbar}>{text[language].contact}</a>
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+        <button className="nav-btn nav-close-btn" aria-label='close menu' onClick={showNavbar}>
           <FaTimes />
         </button>
       </nav>
-      <button className="nav-btn" onClick={showNavbar}>
+      <button className="nav-btn" aria-label='open menu' onClick={showNavbar}>
         <FaBars />
       </button>
     </header>
