@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
@@ -19,7 +19,7 @@ function App() {
       ? navigator.languages[0]
       : navigator.language;
   const userLanguage = userLocale.split('-')[0];
-  
+
   const [language, setLanguage] = useState(
     userLanguage === 'es' || userLanguage === 'en' ? userLanguage : 'en'
   );
@@ -35,7 +35,7 @@ function App() {
         <Vehicles setVehicle={setVehicle} />
         <Explore />
         <Contacts vehicle={vehicle} setVehicle={setVehicle} />
-        <Footer/>
+        <Footer />
       </LanguageContext.Provider>
     </div>
   );
