@@ -23,7 +23,7 @@ function Footer() {
       <p>
         {text[language].language} <LanguageSelector />
       </p>
-      <p className='designBy'>
+      <p className="designBy">
         {text[language].designBy}{' '}
         <a
           aria-label="Website Designer"
@@ -35,7 +35,21 @@ function Footer() {
           Luis
         </a>
       </p>
-      <p className='copyright'>&#169; {new Date().getFullYear()} Trasladosideal.com</p>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Mejores traslados aeropuerto Caracas"
+        href="https://www.forcaracaslovers.com/es/mejores/traslados-aeropuerto-caracas#traslados-ideal"
+      >
+        <img
+          style={{ maxHeight: '100px' }}
+          alt="Traslados ideal"
+          src="https://www.forcaracaslovers.com/images/stamp_verified.png"
+        />
+      </a>
+      <p className="copyright">
+        &#169; {new Date().getFullYear()} Trasladosideal.com
+      </p>
     </footer>
   );
 }
